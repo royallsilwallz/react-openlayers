@@ -1,2 +1,2 @@
 # react-openlayers
-React wrapper in openlayers written in js
+React wrapper for openlayers written in js
