@@ -1,0 +1,222 @@
+.map-legend {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 10px;
+  z-index: 1;
+  box-shadow: 2px 7px 26px -6px RGBA(72 72 72 / 70%);
+
+  .legend-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      margin-top: 0.125rem;
+      margin-left: 0.5rem;
+      cursor: pointer;
+    }
+
+    h6 {
+      font-weight: 500;
+    }
+  }
+
+  .legend-container {
+    margin-top: 0.125rem;
+    max-width: 800px;
+    display: grid;
+    // grid-auto-rows: 20px;
+    // grid-template-columns: repeat(3, 1fr);
+    // grid-template-columns: repeat(auto-fill, 1fr);
+    // grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
+    // grid-template-rows: repeat(3, minmax(75px, auto));
+    grid-auto-flow: column;
+
+    .legend-item {
+      max-width: 18rem;
+      margin: 10px;
+      display: grid;
+      // grid-template-rows: repeat(3, 1fr);
+      grid-auto-flow: column;
+      justify-content: flex-start;
+      // align-items: end;
+      align-items: start;
+
+      p {
+        margin-left: 0.5rem;
+      }
+    }
+
+    .range-legend {
+      margin: 10px 10px 0 10px;
+
+      .range-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        i {
+          cursor: help;
+          font-size: 1.25rem;
+        }
+        .tooltip {
+          position: relative;
+          display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+          visibility: hidden;
+          width: 120px;
+          background-color: #fff;
+          // color: #fff;
+          text-align: center;
+          border-radius: 5px;
+          padding: 5px 0;
+          position: absolute;
+          z-index: 1;
+          bottom: 100%;
+          left: 50%;
+          margin-left: -60px;
+          box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+
+          /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+          opacity: 0;
+          transition: opacity 0.5s;
+        }
+
+        .tooltip:hover .tooltiptext {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
+      .range-color {
+        height: 0.775rem;
+        width: 18rem;
+        margin-top: 1rem;
+        margin-bottom: 0.4rem;
+      }
+      .range-label {
+        width: 18rem;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.7rem;
+      }
+      h6 {
+        font-weight: 500;
+        font-size: 0.84rem;
+      }
+    }
+
+    .raster-legend {
+      margin: 10px 10px 0 10px;
+      h6 {
+        font-weight: 500;
+        font-size: 0.84rem;
+      }
+      p {
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .sublayer-legend-container {
+    ul {
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 500px;
+
+      li {
+        flex: 0 0 25%;
+        max-width: 25%;
+        align-items: flex-start;
+        margin-bottom: 5px;
+
+        span {
+          margin-right: 10px;
+        }
+      }
+    }
+    // .sublayer-legend-item {
+    //   display: flex;
+    //   margin: 10px;
+    // }
+  }
+}
+
+.custom__legend {
+  transition: transform 0.2s;
+  &.is__hover {
+    transition: transform 0.2s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 4.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  // top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 1.1em;
+  width: 1.1em;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--clr-primary-600);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--clr-primary-600);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

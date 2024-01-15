@@ -1,0 +1,123 @@
+table {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+b {
+  color: #333;
+}
+
+.popup-wrapper {
+  display: flex;
+  flex-direction: column;
+  // width: 250px;
+  // height: 300px;
+  // padding: 2px;
+
+  .popup-header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    // height: 10px;
+
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+    .header-title {
+      margin-left: 10px;
+    }
+    .site-link {
+      margin-left: 2rem;
+    }
+  }
+}
+
+.map-popup-container {
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  flex-direction: row;
+  justify-content: space-around;
+
+  .map-popup-body {
+    max-width: 270px;
+    width: 100%;
+    min-width: 250px;
+    max-height: calc(100vh - 32px);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    // box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14),
+    // 0 9px 46px 8px rgba(0, 0, 0, 0.12);
+    -webkit-box-orient: vertical;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: #fff;
+    position: relative;
+    -webkit-transition: all 0.9s ease-in-out;
+    -o-transition: all 0.9s ease-in-out;
+    transition: all 0.9s ease-in-out;
+
+    .map-popup-header {
+      // padding: 0 1.7rem 10px 10px;
+      padding: 0 0 10px 0;
+      border-bottom: 1px solid #ebebeb;
+      text-transform: capitalize;
+      h3 {
+        font-size: 1rem;
+        // line-height: 2.2rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+      }
+      h5 {
+        font-size: 0.75rem;
+        font-weight: 500;
+        line-height: 1.2;
+      }
+    }
+
+    .map-popup-content {
+      -webkit-box-flex: 1;
+      flex-grow: 1;
+      margin: 0;
+      // padding: 1rem;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+      padding-top: 0.6125rem;
+      padding-bottom: 0.6125rem;
+      li {
+        img {
+          width: 100%;
+          height: 15rem;
+          object-fit: cover;
+        }
+        p {
+          color: #757575;
+          font-size: 0.775rem;
+        }
+        b {
+          font-size: 0.875rem;
+          font-weight: 500;
+        }
+      }
+
+      .map-popup-list li:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+
+    .map-popup-footer {
+      position: relative;
+      flex-shrink: 0;
+      // min-height: 52px;
+      margin: 0;
+      // padding: 0 1rem 0.6125rem;
+    }
+  }
+}

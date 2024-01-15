@@ -1,0 +1,130 @@
+.ol-attribution button {
+  display: none !important;
+}
+
+.map-footer {
+  width: 100%;
+}
+
+.map-footer span {
+  width: 100%;
+  position: relative;
+}
+
+.map-footer .ol-attribution li {
+  font-size: 13px !important;
+  color: #484848 !important;
+  display: flex !important;
+}
+
+.map-footer span .ol-attribution {
+  left: 0 !important;
+  right: unset !important;
+  height: 100%;
+}
+
+#map-scalebar {
+  position: relative;
+}
+
+#map-scalebar .ol-scale-line {
+  position: relative !important;
+  bottom: 0 !important;
+}
+
+.ol-scale-line > .ol-scale-line-inner {
+  font-size: 13px !important;
+}
+
+.ol-rotate {
+  display: none !important;
+}
+
+.ol-popup {
+  border-radius: 8px !important;
+  padding: 12px !important;
+  width: 17rem !important;
+}
+
+.ol-control button {
+  color: #484848 !important;
+  font-size: 28px !important;
+  width: 40px !important;
+  height: 40px !important;
+  line-height: 38px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  background-color: rgb(253, 254, 255) !important;
+  border: 1px solid #d7d7d7 !important;
+  border-radius: 8px !important;
+  font-weight: normal !important;
+}
+.ol-control.ol-zoom button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.ol-control button:hover,
+.ol-control button:focus {
+  text-decoration: none !important;
+  background-color: #f5f5f5 !important;
+  outline: none !important;
+  /* color: #011b8e !important; */
+}
+
+.ol-zoom {
+  position: absolute;
+  bottom: 2.5rem !important;
+  left: 1rem !important;
+  top: unset !important;
+  right: unset !important;
+  background: transparent !important;
+}
+.ol-zoom-in {
+  border-radius: 8px !important;
+  box-shadow: 0px 2px 20px 4px rgba(0, 0, 0, 0.12);
+}
+.ol-zoom-out {
+  border-radius: 8px !important;
+  box-shadow: 0px 2px 20px 4px rgba(0, 0, 0, 0.12);
+}
+
+/* .ol-scale-line { */
+/*   background: #ffffff !important; */
+/*   position: absolute !important; */
+/*   bottom: 1rem !important; */
+/*   right: 1rem !important; */
+/*   left: unset !important; */
+/*   padding: 8.5px !important; */
+/* } */
+/**/
+/* .ol-scale-line > .ol-scale-line-inner { */
+/*   font-size: 14px !important; */
+/* } */
+
+.layer-switcher {
+  bottom: 8.2rem !important;
+  left: 1rem !important;
+  top: unset !important;
+  right: unset !important;
+  background: transparent !important;
+  display: none;
+}
+
+.ol-full-screen {
+  background: transparent !important;
+}
+
+.ol-full-screen button {
+  /* display: none !important; */
+  visibility: hidden;
+}
+.ol-full-screen button::after {
+  font-family: 'Material Icons';
+  content: 'fullscreen';
+  visibility: visible;
+  position: absolute;
+  top: -1px;
+  left: 4px;
+}

@@ -1,0 +1,24 @@
+.setting__list {
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  bottom: 15.5rem;
+  z-index: 1;
+
+  a {
+    background: #fff;
+    border-radius: 5px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .is__dropdown {
+    position: absolute;
+    left: -64px;
+    top: 0;
+    display: flex;
+  }
+}
